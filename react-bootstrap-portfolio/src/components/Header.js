@@ -1,24 +1,25 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
-  return (
-    <header>
-        <div className='logo'>
-            <h3>ポートフォリオ</h3>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href='#'>ホーム</a>
-                </li>
-                <li>
-                    <a href='#'>ブログ</a>
-                </li>
-                <li>
-                    <a href='#'>SNS</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-  )
+    return (
+        <header>
+            <div className='logo'>
+                <h3>ポートフォリオ</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">ホーム</Link>
+                    </li>
+                    <li>
+                        <Link to="/blog">ブログ</Link>
+                    </li>
+                    <li>
+                        <Link to="/">SNS</Link>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    )
 }
