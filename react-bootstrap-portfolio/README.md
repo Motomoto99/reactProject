@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Reactを使って簡単なポートフォリオを作成する
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+※Youtubeのハンズオンの動画を参考に作成。引用URL  
+（Youtube：https://www.youtube.com/watch?v=_TPaTndgBfc）  
+ (GitHub：https://github.com/Shin-sibainu/react-portfolio-bootstrap5/tree/main)  
 
-## Available Scripts
+## 流れ
+- Reactひな形の作成  
+- 必要なもの以外を削除  
+- 作成  
 
-In the project directory, you can run:
+## Reactひな形の作成
+作成したいフォルダで`npx create-react-app 'フォルダ名'`をターミナルで実行すると作成される  
+作成されたフォルダ内に移動して、ターミナルで`npm start`を実行するとデフォルトで作成されていたページが表示される。
 
-### `npm start`
+## 必要なフォルダ以外を削除
+必要なフォルダやファイル以外を削除して、それに伴ったimportやコードを削除する
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 作成
+環境構築ができたらポートフォリオ作成を始める
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ファイルの説明
+- App.js  
+HTMLの構成の大枠をここで作成し、returnで表示される感じかな  
+- App.css  
+App.jsに対するCSS  
+- components フォルダ  
+これは任意で作成したもので、App.jsのHTMLの構成要素をこのフォルダ内に作成していく感じかな。  
+構成要素はもっと複雑に構成される場合は、フォルダを新しく作成してコンポーネントを分けるみたい。  
+作成したコンポーネントは、App.jsの方でインポートして使用する。
 
-### `npm test`
+### ルーティング(Router)
+ルーティングするのが楽になる感じ。  
+指定したURLに応じてコンポーネントが変わるようにする  
+`react-router-dom`をimportして使用する`import {BrowserRouter as Router , Route, Routes} from 'react-router-dom`  
+App.jsのreturnの中のHTML要素を<Router>で囲んで、<Routes>は切り分けるコンポーネントをまとめる感じで、<Route>は一つのパスとコンポーネントの紐づけって感じかな。  
+<Link>は、リンクを指定して移動できる感じかな。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### bootstrap
+Reactでbootstrapを使用する場合はnpmでインストールして、importしないといけないみたい。  
+classnameを指定して、すでに作成されているCSSをそのまま適用できるって感じかな？  
+[stert bootstrap](https://startbootstrap.com/)っていうサイトでbootstrapの使用例とかが見れる  
