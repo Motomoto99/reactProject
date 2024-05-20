@@ -16,7 +16,7 @@ export const Header = () => {
                         <Link to="/blog">ブログ</Link>
                     </li>
                     <li>
-                        <Link to="/">SNS</Link>
+                        <Link to="/skil">スキル</Link>
                     </li>
                 </ul>
             </nav>
