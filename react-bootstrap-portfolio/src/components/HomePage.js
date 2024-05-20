@@ -1,19 +1,19 @@
 import React from 'react'
 import reactImage from "../Images/react.png";
-import jsImage from "../Images/js.png";
-import firebaseImage from "../Images/firebase.jpg";
-import profileImage from "../Images/sibainu.jpg";
+import htmlcssjsImage from "../Images/htmlcssjs.jpg";
+import djangoImage from "../Images/django.png";
+import motonImage from "../Images/moton.PNG";
 
 export const HomePage = () => {
   return (
     <div className="container text-center">
-      <h1>Shin Code</h1>
+      <h1>Motomoton</h1>
 
-      <img src={profileImage} className="profileImage" />
+      <img src={motonImage} className="profileImage" />
 
       <p>
-        ShinCodeです。普段は個人でWeb系の情報発信をYoutubeやTwitterにて行っています。主にHTML/CSS/Javascript/Reactメインに取り扱っています。趣味は個人でプログラミングの撮影を行うことです。
-        ShinCodeです。普段は個人でWeb系の情報発信をYoutubeやTwitterにて行っています。主にHTML/CSS/Javascript/Reactメインに取り扱っています。趣味は個人でプログラミングの撮影を行うことです。
+        Motomotonです。趣味でプログラミングやったり、音楽を聴いたり、ベースやギターを弾いてます。主にHTML/CSS/Javascript/React/Next.js/Django/メインに取り扱っています。好きなアーティストはONE OK ROCKです。
+        5月にハッカソンに参加し、バックエンドを開発した。好きな漫画はNARUTOとハイキューです。
       </p>
 
       <section class="page-section" id="services">
@@ -30,7 +30,7 @@ export const HomePage = () => {
                 <i class="fas fa-circle fa-stack-2x text-primary"></i>
                 <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">ECサイト</h4>
+              <h4 class="my-3">自己紹介サイト</h4>
               <p class="text-muted">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
                 maxime quam architecto quo inventore harum ex magni, dicta
@@ -42,7 +42,7 @@ export const HomePage = () => {
                 <i class="fas fa-circle fa-stack-2x text-primary"></i>
                 <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">レスポンシブサイト</h4>
+              <h4 class="my-3">NULL</h4>
               <p class="text-muted">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
                 maxime quam architecto quo inventore harum ex magni, dicta
@@ -54,7 +54,7 @@ export const HomePage = () => {
                 <i class="fas fa-circle fa-stack-2x text-primary"></i>
                 <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="my-3">ウェブセキュリティ</h4>
+              <h4 class="my-3">NULL</h4>
               <p class="text-muted">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
                 maxime quam architecto quo inventore harum ex magni, dicta
@@ -75,14 +75,14 @@ export const HomePage = () => {
               <p>Reactがつかえます</p>
             </div>
             <div class="col-md-4 services">
-              <img src={jsImage} />
-              <h4>HTML/CSS</h4>
-              <p>HTML/CSSがつかえます</p>
+              <img src={htmlcssjsImage} />
+              <h4>HTML/CSS/JS</h4>
+              <p>HTML/CSS/JSがつかえます</p>
             </div>
             <div class="col-md-4 services">
-              <img src={firebaseImage} />
-              <h4>Firebase</h4>
-              <p>Firebaseがつかえます</p>
+              <img src={djangoImage} />
+              <h4>django</h4>
+              <p>djangoがつかえます</p>
             </div>
           </div>
           <button type="button" class="btn btn-primary">
