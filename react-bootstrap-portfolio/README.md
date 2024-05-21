@@ -32,6 +32,7 @@ App.jsに対するCSS
 ### ルーティング(Router)
 ルーティングするのが楽になる感じ。  
 指定したURLに応じてコンポーネントが変わるようにする  
+`npm i react-router-dom`でインストールした。（npm i 'インストールするパッケージ' って感じかな）  
 `react-router-dom`をimportして使用する`import {BrowserRouter as Router , Route, Routes} from 'react-router-dom`  
 App.jsのreturnの中のHTML要素を<Router>で囲んで、<Routes>は切り分けるコンポーネントをまとめる感じで、<Route>は一つのパスとコンポーネントの紐づけって感じかな。  
 <Link>は、リンクを指定して移動できる感じかな。
