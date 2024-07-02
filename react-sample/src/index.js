@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import EventBasic from './components/EventBasic';
+import StateBasic from './components/StateBasic';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <EventBasic type="time" />
+    <StateBasic init={0} />
   </React.StrictMode>
 );
 
