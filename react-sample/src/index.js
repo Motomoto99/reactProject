@@ -5,14 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import EventBasic from './components/EventBasic';
 import StateBasic from './components/StateBasic';
+import books from './samples/my-react/src/chap03/books'
+import ForList from './samples/my-react/src/chap03/ForList'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-    <EventBasic type="time" />
-    <StateBasic init={0} />
-  </React.StrictMode>
+  <ForList src={books} />
+
 );
 
 // If you want to start measuring performance in your app, pass a function
