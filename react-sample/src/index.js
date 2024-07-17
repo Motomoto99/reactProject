@@ -4,13 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import EventBasic from './components/EventBasic';
-import StateBasic from './components/StateBasic';
+import StateBasic from './samples/my-react/src/chap03/StateBasic';
 import books from './samples/my-react/src/chap03/books'
 import ForNest from './samples/my-react/src/chap03/ForNest';
+import SelectStyle from './samples/my-react/src/chap03/SelectStyle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ForNest src={books} />
+  <>
+    <ForNest src={books} />
+    <SelectStyle mode="black" />
+    <StateBasic init={0} />
+  </>
 
 );
 
