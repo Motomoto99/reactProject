@@ -8,13 +8,14 @@ import StateBasic from './samples/my-react/src/chap03/StateBasic';
 import books from './samples/my-react/src/chap03/books'
 import ForNest from './samples/my-react/src/chap03/ForNest';
 import SelectStyle from './samples/my-react/src/chap03/SelectStyle';
+import EventPoint from './samples/my-react/src/chap03/EventPoint';
+import EventKey from './samples/my-react/src/chap03/EventKey';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <ForNest src={books} />
-    <SelectStyle mode="black" />
-    <StateBasic init={0} />
+    <EventPoint />
+    <EventKey />
   </>
 
 );
