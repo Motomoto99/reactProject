@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StateTodo from './samples/my-react/src/chap04/StateTodo';
+import FormBasic from './samples/my-react/src/chap04/FormBasic';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <StateTodo />
+    <FormBasic />
   </>
 
 );
