@@ -3,17 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import StateTodo from './samples/my-react/src/chap04/StateTodo';
-import FormBasic from './samples/my-react/src/chap04/FormBasic';
-import FormYup from './samples/my-react/src/chap04/FormYup';
+import ProfilerBasic from './samples/my-react/src/chap05/ProfilerBasic';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <StateTodo />
-    <FormBasic />
-    <br></br>
-    <FormYup />
+    <ProfilerBasic />
   </>
 
 );

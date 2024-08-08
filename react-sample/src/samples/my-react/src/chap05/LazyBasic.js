@@ -7,11 +7,11 @@ const LazyButton = lazy(() => sleep(2000).then(() => import('./LazyButton')));
 
 export default function LazyBasic() {
   return (
-    <Suspense fallback={<p>Now Loading...</p>}>
+    <Suspense fallback= {<MyLoading />}>
       <LazyButton />
     </Suspense>
 
-      // <Suspense fallback= {<MyLoading />}>
+      // <Suspense fallback={<p>Now Loading...</p>}>
       //   <LazyButton />
       // </Suspense>
   );
