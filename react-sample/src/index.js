@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StateTodo from './samples/my-react/src/chap04/StateTodo';
 import FormBasic from './samples/my-react/src/chap04/FormBasic';
+import FormYup from './samples/my-react/src/chap04/FormYup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
     <StateTodo />
     <FormBasic />
+    <br></br>
+    <FormYup />
   </>
 
 );
