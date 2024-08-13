@@ -11,6 +11,11 @@ export default function StyledBasic(){
                 color: white;
             }
             `}</style>
+            <style jsx global>{`
+            h3 {
+                background-color:Yellow;
+            }
+            `}</style>
             <div className="panel"><b>Styled JSX</b>はJSX式にスタイルを定義をしています。
             </div>
         </>
