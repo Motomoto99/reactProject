@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import '../stories/button.css';
+import '../../stories/button.css';
 
 /**
  * 属性の設定に応じて種々のボタンを生成
