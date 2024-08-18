@@ -2,16 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import PortalBasic from './components/chap05/PortalBasic';
-import ErrorRetryRoot from './components/chap05/ErrorRetryRoot';
+import FormMui from './components/chap06/FormMui';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <div id="dialog"></div>
-    <PortalBasic />
-    <ErrorRetryRoot/>
-  </React.StrictMode>
+  <>
+    <FormMui />
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
