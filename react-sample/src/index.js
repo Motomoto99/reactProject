@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import FormMui from './components/chap06/FormMui';
-import QueryPre from './components/chap06/QueryPre';
+import QueryBasic from './components/chap06/QueryBasic';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <QueryPre />
+    <QueryBasic />
   </>
 );
 
