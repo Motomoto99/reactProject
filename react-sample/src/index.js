@@ -2,16 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import HookRefNg from './components/chap07/HookRefNg';
-import HookRef from './components/chap07/HookRef';
-import HookRefForward from './components/chap07/HookRefForward';
+import HookReducer from './components/chap07/HookReducer';
+import HookReducerUp from './components/chap07/HookReducerUp';
+import HookReducerInit from './components/chap07/HookReducerInit';
+import MyThemeProvider from './components/chap07/MyThemeProvider';
+import HookThemeButton from './components/chap07/HookThemeButton';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <HookRefNg />
-    <HookRef />
-    <HookRefForward />
+    <MyThemeProvider>
+      <HookThemeButton />
+    </MyThemeProvider>
   </>
 );
 
