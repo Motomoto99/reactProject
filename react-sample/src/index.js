@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import QueryBasic from './components/chap06/QueryBasic';
+import HookRefNg from './components/chap07/HookRefNg';
+import HookRef from './components/chap07/HookRef';
+import HookRefForward from './components/chap07/HookRefForward';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <QueryBasic />
+    <HookRefNg />
+    <HookRef />
+    <HookRefForward />
   </>
 );
 
