@@ -1,6 +1,6 @@
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { useState } from 'react';
-import { todoAtom, todoLastIdSelector } from '../store/atom';
+import { todoAtom, todoLastIdSelector } from '../../store/atom';
 import '../chap04/StateTodo.css';
 
 export default function RecoilTodo() {

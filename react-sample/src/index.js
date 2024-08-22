@@ -2,18 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import HookReducer from './components/chap07/HookReducer';
-import HookReducerUp from './components/chap07/HookReducerUp';
-import HookReducerInit from './components/chap07/HookReducerInit';
-import MyThemeProvider from './components/chap07/MyThemeProvider';
-import HookThemeButton from './components/chap07/HookThemeButton';
+import { RecoilRoot } from 'recoil';
+import RecoilTodoUp from './components/chap07/RecoilTodoUp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <MyThemeProvider>
-      <HookThemeButton />
-    </MyThemeProvider>
+    <RecoilRoot>
+      <RecoilTodoUp />
+    </RecoilRoot>
   </>
 );
 

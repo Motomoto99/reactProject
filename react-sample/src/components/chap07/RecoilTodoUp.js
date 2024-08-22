@@ -1,6 +1,6 @@
 import { useRecoilState } from 'recoil';
 import { useState } from 'react';
-import { idsAtom, todoListSelector } from '../store/atomUp';
+import { idsAtom, todoListSelector } from '../../store/atomUp';
 import '../chap04/StateTodo.css';
 
 export default function RecoilTodoUp() {
@@ -11,7 +11,7 @@ export default function RecoilTodoUp() {
   const handleChangeTitle = e => {setTitle(e.target.value)};
 
   const handleAdd = () => {
-    const newId = Math.max(...(ids.length ? ids : [0])) + 1;
+    const newId = Math.max(...ids) + 1;
     setTodo({
       type: 'add',
       newItem: {
