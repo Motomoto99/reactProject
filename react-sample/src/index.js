@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { RecoilRoot } from 'recoil';
-import RecoilTodoUp from './components/chap07/RecoilTodoUp';
+import HookDeferredTransition from './components/chap07/HookDeferredTransition';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <RecoilRoot>
-      <RecoilTodoUp />
-    </RecoilRoot>
+    <HookDeferredTransition />
   </>
 );
 
