@@ -86,7 +86,7 @@ const routesParam = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RouterParam />}
       // errorElement={<CommonErrorPage />}
-      // errorElement={<InvalidParamsPage />}
+      errorElement={<InvalidParamsPage />}
     >
       <Route path="/" element={<TopPage />} />
       <Route path="/books" lazy={async ()=> {
@@ -102,7 +102,7 @@ const routesParam = createBrowserRouter(
         action={bookAction} />
       {/* <Route path="/book/:isbn" element={<BookPage />} /> */}
       <Route path="/book/:isbn?" element={<BookPage />}
-        // errorElement={<InvalidParamsPage />}
+        errorElement={<InvalidParamsPage />}
       />
       <Route path="/bookQuery" element={<BookQueryPage />} />
       <Route path="/bookState" element={<BookStatePage />}/>
