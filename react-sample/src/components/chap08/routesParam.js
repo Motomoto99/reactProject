@@ -108,10 +108,10 @@ const routesParam = createBrowserRouter(
       <Route path="/bookState" element={<BookStatePage />}/>
       <Route path="/search/*" element={<SearchPage />} />
       <Route path="/weather/:city" element={<WeatherPage />}
-        loader={({ params }) =>
+        /*loader={({ params }) =>
           fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city}&lang=ja&appid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`)
-        }
-        // loader={fetchWeather}
+        }*/
+        loader={fetchWeather}
         />
       {/* <Route path="/weather/:city"
         lazy={() => import('./WeatherLazyPage')} /> */}
