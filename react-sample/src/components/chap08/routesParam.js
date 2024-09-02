@@ -17,7 +17,7 @@ import { date, number, string } from 'yup';
 const sleep = ms => new Promise(res => setTimeout(res, ms));
 
 const fetchWeather = async ({ params }) => {
-  // await sleep(2000);
+  await sleep(2000);
   const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city}&lang=ja&appid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`);
   if (res.ok) { return res; }
   return json({
@@ -85,8 +85,8 @@ const bookAction = async ({ request }) => {
 const routesParam = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RouterParam />}
-      // errorElement={<CommonErrorPage />}
-      errorElement={<InvalidParamsPage />}
+      errorElement={<CommonErrorPage />}
+      //errorElement={<InvalidParamsPage />}
     >
       <Route path="/" element={<TopPage />} />
       <Route path="/books" lazy={async ()=> {

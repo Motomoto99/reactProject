@@ -26,13 +26,11 @@ export default function RouterParam() {
         <li><NavLink to="/nothing/foo/bar">存在しないページ</NavLink></li>
       </ul>
       <hr />
-      {/*<Outlet />*/}
-      <Outlet context={[count, setCount]} />
-      {/* {
+      {
         navigation.state === 'loading' ?
           <p>Loading...</p> :
           <Outlet />
-      } */}
+      }
     </>
   );
 }
