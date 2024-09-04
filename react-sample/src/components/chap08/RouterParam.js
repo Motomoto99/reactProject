@@ -29,7 +29,7 @@ export default function RouterParam() {
       {
         navigation.state === 'loading' ?
           <p>Loading...</p> :
-          <Outlet />
+          <Outlet context={[count,setCount]}/>
       }
     </>
   );

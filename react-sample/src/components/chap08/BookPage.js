@@ -1,6 +1,4 @@
 import { useParams } from 'react-router-dom';
-import MyHeader from './MyHeader';
-import books from '../chap07/books';
 
 export default function BookPage() {
   // const params = useParams();
@@ -23,11 +21,12 @@ export default function BookPage() {
     </>
   );
   */
-
+  
   // 例外をスローする
   const { isbn = '978-4-8156-0182-9' } = useParams();
   if (!/978-4-[0-9]{2,7}-[0-9]{2,7}-[0-9X]/.test(isbn)) {
     throw new RangeError('ISBN is invalid!!');
   }
   return <p>ISBNコード「{isbn}」のページです。</p>;
+  
 }

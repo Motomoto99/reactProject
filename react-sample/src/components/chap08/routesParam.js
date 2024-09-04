@@ -20,27 +20,30 @@ const fetchWeather = async ({ params }) => {
   await sleep(2000);
   const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${params.city}&lang=ja&appid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`);
   if (res.ok) { return res; }
+  /*
   return json({
     "weather":[
       {"id":803,"main":"Unknown","description":"不明","icon":"50d"}
     ],
     "name":"不明"
   });
-
-  // return new Response(
-  //   JSON.stringify({
-  //     "weather":[
-  //       {"id":803,"main":"Unknown","description":"不明","icon":"50d"}
-  //     ],
-  //     "name":"不明"
-  //   }),
-  //   {
-  //     status: 200,
-  //     headers: {
-  //       'Content-Type': 'application/json; UTF-8',
-  //     },
-  //   }
-  // );
+  */
+  /*
+  return new Response(
+    JSON.stringify({
+      "weather":[
+        {"id":803,"main":"Unknown","description":"不明","icon":"50d"}
+      ],
+      "name":"不明"
+    }),
+    {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json; UTF-8',
+      },
+    }
+  );
+  */
 
   // const data = {
   //   "weather":[
@@ -49,14 +52,14 @@ const fetchWeather = async ({ params }) => {
   //   "name":"不明"
   // };
 
-  // switch (res.status) {
-  //   case 404:
-  //     throw json({ message: 'city is invalid!!' }, { status: 404 });
-  //   case 401:
-  //     throw json({ message: 'api key is invalid!!' }, { status: 401 });
-  //   default:
-  //     throw json({ message: 'api server is in trouble...' }, { status: 501 });
-  // }
+  switch (res.status) {
+    case 404:
+      throw json({ message: 'city is invalid!!' }, { status: 404 });
+    case 401:
+      throw json({ message: 'api key is invalid!!' }, { status: 401 });
+    default:
+      throw json({ message: 'api server is in trouble...' }, { status: 501 });
+  }
 };
 
 const bookAction = async ({ request }) => {
@@ -100,7 +103,7 @@ const routesParam = createBrowserRouter(
       </Route>
       <Route path="/book/form" element={<BookFormPage />}
         action={bookAction} />
-      {/* <Route path="/book/:isbn" element={<BookPage />} /> */}
+      <Route path="/book/:isbn" element={<BookPage />} />
       <Route path="/book/:isbn?" element={<BookPage />}
         errorElement={<InvalidParamsPage />}
       />

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
-import routesHandle from './components/chap08/routesHandle';
 import { HelmetProvider } from 'react-helmet-async';
 import routesParam from './components/chap08/routesParam';
 
