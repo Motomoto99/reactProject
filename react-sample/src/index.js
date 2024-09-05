@@ -3,15 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import routesParam from './components/chap08/routesParam';
+import routesScroll from './components/chap08/routesScroll';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <HelmetProvider>
-      <RouterProvider router={routesParam} />
-    </HelmetProvider>
+    <RouterProvider router={routesScroll} />
   </>
 );
 
