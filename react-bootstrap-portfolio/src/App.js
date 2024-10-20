@@ -17,7 +17,7 @@ function App() {
           <Route path='/skil' element={<SkilPage />} />
         </Routes>
 
-
+ 
       </div>
     </Router >
   );
