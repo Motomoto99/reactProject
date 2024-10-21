@@ -1,4 +1,4 @@
-import { Box, TextField } from '@mui/material'
+import { Box, Button, TextField } from '@mui/material'
 import React from 'react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -6,7 +6,10 @@ import { useForm } from 'react-hook-form'
 
 
 export default function Lifespan() {
-  const { register, handleSubmit, formState: { error } } = useForm()
+  const { register, handleSubmit, formState: { errors } } = useForm()
+  const onsubmit = (data) => {
+    console.log(data)
+  }
 
   return (
     <div>
@@ -18,15 +21,32 @@ export default function Lifespan() {
         いろんな単位で表示
         フォームの下のところか右側に表示させようか
       */}
-      <Box>
-        <form>
-          <Box>
-            <TextField id="filled-basic" label="Filled" variant="filled" type='number' />
-          </Box>
-          <Box>
-            <TextField id="filled-basic" label="Filled" variant="filled" />
-          </Box>
-        </form>
+      <Box
+        component="form"
+        onSubmit={handleSubmit(onsubmit)}
+        sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }}
+        autoComplete="off"
+      >
+        <Box>
+          <TextField id="age" label="年齢" variant="filled" type='number' 
+            {...register('age',{
+              required: '年齢は必須です',
+              min:{
+                value:0,
+                message: '年齢は０以上にしてください'
+              },
+            })}
+            error={!!errors.age}
+            helperText={errors.age ? errors.age.message : ''}
+          />
+        </Box>
+        <Box>
+          <TextField id="lifespan" label="余命" variant="filled" type='number' />
+        </Box>
+        <Box>
+          <Button type="submit" variant='contained'>計算開始</Button>
+          <Button type='reset' variant='contained'>リセット</Button>
+        </Box>
       </Box>
 
     </div>
