@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import HomePage from "./components/HomePage";
 import { Box } from "@mui/material";
 import Lifespan from "./components/Lifespan";
+import Posts from "./components/posts";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/lifespan" element={<Lifespan />}/>
+            <Route path="/posts" element={<Posts />}/>
           </Routes>
         </Box>
       </div>
