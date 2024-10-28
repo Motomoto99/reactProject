@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import HomePage from "./components/HomePage";
 import { Box } from "@mui/material";
 import Lifespan from "./components/Lifespan";
-import Posts from "./components/posts";
+import PostFun from "./components/PostFun";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/lifespan" element={<Lifespan />}/>
-            <Route path="/posts" element={<Posts />}/>
+            <Route path="/posts" element={<PostFun />}/>
           </Routes>
         </Box>
       </div>

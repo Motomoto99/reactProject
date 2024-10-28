@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 const program = [
     { title: 'ホーム', href: '/', icon: Home },
     { title: '寿命計算機', href: '/lifespan', icon: Info },
-    { title: '投稿機能', href:'/posts', icon: AccounTree },
+    { title: '投稿機能', href:'/posts', icon: Mail},
 ]
 
 export default function Header() {
