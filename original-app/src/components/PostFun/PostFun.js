@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Button, TextField } from '@mui/material'
 
 export default function PostFun() {
+  const [stepIndex, setStepIndex] = useState(0);
+
+  const handleNext = () => setStepIndex(prev => prev + 1);
+  const handleBack = () => setStepIndex(prev => prev - 1);
+
+  function getStepContent(stepIndex, handleNext, handleBack) {
+    switch (stepIndex) {
+      case 0:
+        return <Basic handleNext={handleNext} />;
+      case 1:
+        return <Optional handleNext={handleNext} handleBack={handleBack} />;
+      case 2:
+        return <Confirm handleBack={handleBack} />;
+      default:
+        return 'Unknown stepIndex';
+    }
+  }
+
+
   return (
     <Box>
       {/* 
@@ -14,10 +33,13 @@ export default function PostFun() {
       */}
       <h2 className='text-2xl p-3 font-serif font-bold '>目標投稿機能</h2>
       <p className='font-serif pb-2'>
-        目標を投稿する機能です。<br/>
-        ダッシュボードには、すでに投稿した目標を一覧表示しています。<br/>
+        目標を投稿する機能です。<br />
+        ダッシュボードには、すでに投稿した目標を一覧表示しています。<br />
         投稿ボタンを押して新しい目標を投稿しよう！
       </p>
+      <Box>
+        {getStepContent(stepIndex, handleNext, handleBack)}
+      </Box>
     </Box>
   )
 }

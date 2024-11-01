@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import HomePage from "./components/HomePage";
 import { Box } from "@mui/material";
 import Lifespan from "./components/Lifespan";
-import PostFun from "./components/PostFun";
+import PostFun from "./components/PostFun/PostFun";
 
 function App() {
   return (
