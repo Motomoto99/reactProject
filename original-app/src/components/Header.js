@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Home, Mail, Info, AccounTree } from '@mui/icons-material'
+import { Home, Mail, Info, Cookie } from '@mui/icons-material'
 import { Box, Button, Drawer, List, ListItem, ListItemButton, ListItemText, ListItemIcon } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 
@@ -8,6 +8,7 @@ const program = [
     { title: 'ホーム', href: '/', icon: Home },
     { title: '寿命計算機', href: '/lifespan', icon: Info },
     { title: '投稿機能', href:'/posts', icon: Mail},
+    { title: '料理レシピ機能', href:'/cook', icon: Cookie},
 ]
 
 export default function Header() {

@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Box, Button, TextField } from '@mui/material'
+import Basic from './Basic';
+import Optional from './Optional';
+import Confirm from './Confirm';
 
 export default function PostFun() {
   const [stepIndex, setStepIndex] = useState(0);
