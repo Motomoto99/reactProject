@@ -4,7 +4,7 @@ import HomePage from "./components/HomePage";
 import { Box } from "@mui/material";
 import Lifespan from "./components/Lifespan";
 import PostFun from "./components/PostFun/PostFun";
-import Cook from "./components/Cook";
+import Cook from "./components/Cooks/Cook";
 
 function App() {
   return (
